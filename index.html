@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class = "container">
+      <h1> About Mahyar Hashemi-Alavi </h1>
+
+      <div class = "row">
+
+        <div class = "col-fluid">
+          <h2> Overview </h2>
+          <p> I am an Iranian who was born in California. All of my immediate family and distant relatives were born in Iran. My family came here around 2002 and have lived here ever since. I am now an incoming Freshman to CSUN in the mechanical engineering field.
+          </p>
+        </div>
+
+        <div class = "col-fluid">
+          <input type = 'button' value = 'Early Life' onclick = 'openEarlyText()' onmouseover = 'explain()' onmouseout = 'gone()'>
+          <p id = 'tell'> </p>
+          <p id = 'expand'> </p>
+        </div>
+
+        <div class = "col-fluid">
+          <input type = 'button' value = 'Recent Life' onclick = 'openRecentText()' onmouseover = 'arrange()' onmouseout = 'erase()'>
+          <p id = 'short'> </p>
+          <p id = 'show'> </p>
+        </div>
+
+      </div>
+
+    </div>
+    
+    <script>
+      function openRecentText(){        
+        var words = ' ';
+        if (words == ' '){
+          words = "I started off high school at Reseda Charter High School for 9th and 10th grade.This is where I started my passion for engineering, through the engineering class itself, as well as playing volleyball on the varsity team for my school. However, I switched schools to Magnolia Science Academy 1 for 11th and 12th grade. In MSA I was not able to continue playing volleyball, because there was not enough students willing to play. I was able to continue pursuing engineering because I joined the robotics team and became the main coder for both the A and B teams. After this I started my application process for colleges and applied to 13 different universities. After deliberation, and consideration I decided my university of choice would be CSUN.";
+        }
+        else {
+          words = ' ';
+        }
+        document.getElementById('show').innerHTML = words;
+          
+      }
+      function arrange(){
+        document.getElementById('short').innerHTML = 'By clicking this button you can see the recent events in my life.';
+      }
+      function erase(){
+        document.getElementById('short').innerHTML = ' ';
+      }
+
+
+
+      function openEarlyText(){
+        document.getElementById('expand').innerHTML = 'I was born in Burbank, California in 2003, which is where I also lived for a while. After a few years, I moved to Iran to pursue my First Grade education. I moved back to America in around 2010 or so. I went to Elementary at Joaquin Miller from 2-4th grade, continued 4th grade at Dearborn as well as finished 5th grade there. After that, I entered into George K. Porter Middle School where I stayed for the entirety of middle school.';
+      }
+      function explain(){
+        document.getElementById('tell').innerHTML = 'If you click on this button you can see what my early life was like!';
+      }
+      function gone(){
+        document.getElementById('tell').innerHTML = ' ';
+      }
+    </script>
+  </body>
+</html>
